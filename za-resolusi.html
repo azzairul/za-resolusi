@@ -28,6 +28,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 1000;
         }
 
         .navbar ul {
@@ -51,14 +52,49 @@
             color: #ddd;
         }
 
+        .sidebar {
+            width: 200px;
+            background-color: #007bff;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 60px; /* Space for navbar */
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            color: #ddd;
+        }
+
         .container {
             text-align: center;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 80px; /* Add margin to prevent the container from overlapping the navbar */
-            margin-bottom: 40px; /* Space for footer */
+            margin-top: 80px;
+            margin-bottom: 40px;
+            margin-left: 220px; /* Space for the sidebar */
+            width: calc(100% - 240px); /* Adjust the width for sidebar */
         }
 
         h1 {
@@ -106,6 +142,15 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
